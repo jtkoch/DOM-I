@@ -101,3 +101,5 @@ const mainContact = document.querySelectorAll('.contact p');
 mainContact.forEach((item, index) => item.innerText = contactValues[index + 1]);
 
 // Adding footer content
+const footer = document.querySelector('footer');
+footer.innerText = siteContent.footer.copyright;
