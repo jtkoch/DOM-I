@@ -74,3 +74,30 @@ getStarted.innerText = siteContent.cta.button;
 const ctaImg = document.querySelector('.cta img');
 ctaImg.src = siteContent.cta["img-src"];
 
+// Adding main content
+const featuresH4 = document.querySelectorAll('.main-content h4');
+featuresH4[0].innerText = siteContent["main-content"]["features-h4"];
+featuresH4[1].innerText = siteContent["main-content"]["about-h4"];
+featuresH4[2].innerText = siteContent["main-content"]["services-h4"];
+featuresH4[3].innerText = siteContent["main-content"]["product-h4"];
+featuresH4[4].innerText = siteContent["main-content"]["vision-h4"];
+
+const mainContent = document.querySelectorAll('.main-content p');
+mainContent[0].innerText = siteContent["main-content"]["features-content"];
+mainContent[1].innerText = siteContent["main-content"]["about-content"];
+mainContent[2].innerText = siteContent["main-content"]["services-content"];
+mainContent[3].innerText = siteContent["main-content"]["product-content"];
+mainContent[4].innerText = siteContent["main-content"]["vision-content"];
+
+const mainContentImg = document.querySelector('.main-content img');
+mainContentImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Adding contact content
+const contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent.contact["contact-h4"];
+
+const contactValues = Object.values(siteContent.contact);
+const mainContact = document.querySelectorAll('.contact p');
+mainContact.forEach((item, index) => item.innerText = contactValues[index + 1]);
+
+// Adding footer content
