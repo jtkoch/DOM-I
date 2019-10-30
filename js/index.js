@@ -38,14 +38,39 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Navigation bar 
-let navItems = Object.values(siteContent.nav)
+const navItems = Object.values(siteContent.nav)
 console.log(navItems)
-let navLinks = document.querySelectorAll('a');
+const navLinks = document.querySelectorAll('a');
 navLinks.forEach((item, index) => item.innerText = navItems[index])
 
 // Change color to green
 navLinks.forEach((item) => item.style.color = 'green')
+
+// appendChild() and prepend()
+const nav = document.querySelector('nav');
+
+const navOne = document.createElement('a');
+navOne.textContent = "New Item 1";
+nav.appendChild(navOne);
+
+const navTwo = document.createElement('a');
+navTwo.textContent = "New Item 2";
+nav.prepend(navTwo);
+
+const navImg = document.querySelector('nav');
+navImg.src = siteContent.nav["img-src"];
+
+// Adding CTA content
+const text = document.querySelector('h1');
+text.innerText = siteContent.cta.h1;
+
+const getStarted = document.querySelector('button');
+getStarted.innerText = siteContent.cta.button;
+
+const ctaImg = document.querySelector('.cta img');
+ctaImg.src = siteContent.cta["img-src"];
+
