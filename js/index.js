@@ -40,3 +40,12 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Navigation bar 
+let navItems = Object.values(siteContent.nav)
+console.log(navItems)
+let navLinks = document.querySelectorAll('a');
+navLinks.forEach((item, index) => item.innerText = navItems[index])
+
+// Change color to green
+navLinks.forEach((item) => item.style.color = 'green')
