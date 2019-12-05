@@ -38,5 +38,90 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Navigation bar 
+const navItems = Object.values(siteContent.nav)
+console.log(navItems)
+const navLinks = document.querySelectorAll('a');
+navLinks.forEach((item, index) => item.innerText = navItems[index])
+
+// Change color to green
+navLinks.forEach((item) => item.style.color = 'green')
+
+// appendChild() and prepend()
+const nav = document.querySelector('nav');
+
+const navOne = document.createElement('a');
+navOne.textContent = "New Item 1";
+nav.appendChild(navOne);
+
+const navTwo = document.createElement('a');
+navTwo.textContent = "New Item 2";
+nav.prepend(navTwo);
+
+const navImg = document.querySelector('nav');
+navImg.src = siteContent.nav["img-src"];
+
+// Adding CTA content
+const text = document.querySelector('h1');
+text.innerText = siteContent.cta.h1;
+
+const getStarted = document.querySelector('button');
+getStarted.innerText = siteContent.cta.button;
+
+const ctaImg = document.querySelector('.cta img');
+ctaImg.src = siteContent.cta["img-src"];
+
+// Adding main content
+const featuresH4 = document.querySelectorAll('.main-content h4');
+featuresH4[0].innerText = siteContent["main-content"]["features-h4"];
+featuresH4[1].innerText = siteContent["main-content"]["about-h4"];
+featuresH4[2].innerText = siteContent["main-content"]["services-h4"];
+featuresH4[3].innerText = siteContent["main-content"]["product-h4"];
+featuresH4[4].innerText = siteContent["main-content"]["vision-h4"];
+
+const mainContent = document.querySelectorAll('.main-content p');
+mainContent[0].innerText = siteContent["main-content"]["features-content"];
+mainContent[1].innerText = siteContent["main-content"]["about-content"];
+mainContent[2].innerText = siteContent["main-content"]["services-content"];
+mainContent[3].innerText = siteContent["main-content"]["product-content"];
+mainContent[4].innerText = siteContent["main-content"]["vision-content"];
+
+const mainContentImg = document.querySelector('.main-content img');
+mainContentImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Adding contact content
+const contactH4 = document.querySelector('.contact h4');
+contactH4.innerText = siteContent.contact["contact-h4"];
+
+const contactValues = Object.values(siteContent.contact);
+const mainContact = document.querySelectorAll('.contact p');
+mainContact.forEach((item, index) => item.innerText = contactValues[index + 1]);
+
+// Adding footer content
+const footer = document.querySelector('footer');
+footer.innerText = siteContent.footer.copyright;
+
+// sprint
+
+navLinks.forEach(function(item){
+  item.style.color = "black";
+});
+
+navOne.style.color = "black";
+navOne.style.cursor = "pointer";
+navTwo.style.color = "black";
+navTwo.style.cursor = "pointer";
+
+mainContent.forEach(function(item){
+  item.style.backgroundColor = "lightblue";
+})
+mainContent.forEach(function(item){
+  item.style.padding = "50px";
+})
+
+
+getStarted.style.backgroundColor = "lightblue"; 
+
