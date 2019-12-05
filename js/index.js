@@ -103,3 +103,25 @@ mainContact.forEach((item, index) => item.innerText = contactValues[index + 1]);
 // Adding footer content
 const footer = document.querySelector('footer');
 footer.innerText = siteContent.footer.copyright;
+
+// sprint
+
+navLinks.forEach(function(item){
+  item.style.color = "black";
+});
+
+navOne.style.color = "black";
+navOne.style.cursor = "pointer";
+navTwo.style.color = "black";
+navTwo.style.cursor = "pointer";
+
+mainContent.forEach(function(item){
+  item.style.backgroundColor = "lightblue";
+})
+mainContent.forEach(function(item){
+  item.style.padding = "50px";
+})
+
+
+getStarted.style.backgroundColor = "lightblue"; 
+
